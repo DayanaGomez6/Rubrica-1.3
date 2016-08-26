@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.facci.proyectodmgc.MainActivityDMGC">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:text="ID"
+        android:id="@+id/TVIDMGC"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/abc_capital_off"
+        android:textColorHint="#882f2f"
+        android:textColor="#0c0a0a"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtID_dmgc"
+        android:layout_below="@+id/TVIDMGC"
+        android:layout_alignEnd="@+id/txtNombre_dmgc"
+        android:layout_alignStart="@+id/txtNombre_dmgc"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE"
+        android:id="@+id/TVNOMBREDMGC"
+        android:layout_below="@+id/txtID_dmgc"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/abc_capital_off"
+        android:textColorHint="#882f2f"
+        android:textColor="#0c0a0a"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNombre_dmgc"
+        android:layout_below="@+id/TVNOMBREDMGC"
+        android:layout_alignStart="@+id/txtRecintoElectoral_dmgc"
+        android:layout_alignEnd="@+id/txtRecintoElectoral_dmgc"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APELLIDO"
+        android:id="@+id/TVAPELLIDO_DMGC"
+        android:layout_below="@+id/txtNombre_dmgc"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/abc_capital_off"
+        android:textColorHint="#882f2f"
+        android:textColor="#0c0a0a"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtApellido_dmgc"
+        android:layout_below="@+id/TVAPELLIDO_DMGC"
+        android:layout_alignEnd="@+id/TVRECINTO"
+        android:layout_alignStart="@+id/TVRECINTO"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECINTO ELECTORAL"
+        android:id="@+id/TVRECINTO"
+        android:layout_below="@+id/txtApellido_dmgc"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/abc_capital_off"
+        android:textColorHint="#882f2f"
+        android:textColor="#0c0a0a"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRecintoElectoral_dmgc"
+        android:layout_alignEnd="@+id/TVAÑO_DMGC"
+        android:layout_below="@+id/TVRECINTO"
+        android:layout_alignStart="@+id/TVAÑO_DMGC"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="AÑO NACIMIENTO"
+        android:id="@+id/TVAÑO_DMGC"
+        android:layout_below="@+id/txtRecintoElectoral_dmgc"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/abc_capital_off"
+        android:textColorHint="#882f2f"
+        android:textColor="#0c0a0a"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAnoNacimiento_dmgc"
+        android:layout_below="@+id/TVAÑO_DMGC"
+        android:layout_alignStart="@+id/TVAÑO_DMGC"
+        android:layout_alignEnd="@+id/TVAÑO_DMGC"
+        android:textSize="18dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INGRESAR"
+        android:id="@+id/btningresar_dmgc"
+        android:layout_below="@+id/txtAnoNacimiento_dmgc"
+        android:layout_toStartOf="@+id/TVIDMGC"
+        android:onClick="insertarClick"
+        android:textSize="18dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODIFICAR"
+        android:id="@+id/btnmodifica_dmgc"
+        android:layout_alignTop="@+id/btningresar_dmgc"
+        android:layout_toEndOf="@+id/TVIDMGC"
+        android:onClick="modificarRegistroClick"
+        android:textSize="18dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ELIMINAR"
+        android:id="@+id/btneliminar_dmgc"
+        android:layout_below="@+id/btningresar_dmgc"
+        android:layout_alignStart="@+id/btningresar_dmgc"
+        android:onClick="eliminarRegistroClick"
+        android:textSize="18dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VER TODOS"
+        android:id="@+id/btnver_dmgc"
+        android:layout_below="@+id/btnmodifica_dmgc"
+        android:layout_alignStart="@+id/btnmodifica_dmgc"
+        android:onClick="verTodosClick"
+        android:textSize="18dp" />
+
+</RelativeLayout>
